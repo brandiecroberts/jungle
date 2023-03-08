@@ -62,7 +62,13 @@
       align-items: flex-end;
       text-align: right;
       font-weight: 700;
+      // color:rgba(0, 130, 29, 0.7);
     }
+
+    .product-price {
+      color:rgba(0, 130, 29, 0.7);    
+    }
+   
     button {
       width: 140px;
       font-size: 1em;
