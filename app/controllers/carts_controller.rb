@@ -25,4 +25,11 @@ class CartsController < ApplicationController
     update_cart cart
   end
 
+  # def empty_cart
+
+  #     flash[:notice] = "Your cart is empty, please add an item"
+  #     redirect_to root_path
+    
+  # end
+
 end
