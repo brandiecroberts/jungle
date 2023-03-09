@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'about/index'
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
@@ -71,4 +72,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get '/about', to: 'about#index', as: 'about'
 end
