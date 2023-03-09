@@ -24,4 +24,12 @@
     font-size: 1em;
     color: rgba(0, 130, 29, 0.7);
   }
+
+  .alert {
+    color: white
+  }
+
+  .alert.alert-primary {
+    background-color: rgba(0, 130, 29, 0.7);
+  }
 }
