@@ -1,11 +1,41 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+    <h1>Order # <%= @order.id %></h1>
   </header>
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @order.line_items.each do |line_item| %>
+      <tr>
+      <td class="product-image"><%= image_tag line_item.product.image_url %></td>
+      <td class="product-name"><%= line_item.product.name %></td>
+      <td class="product-description"><%= line_item.product.description %></td>
+      <td class="product-quantity"><%= line_item.quantity %></td>
+      <td class="product-price"><%= number_to_currency(line_item.item_price_cents / 100.0) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+  </table>
+
+
+    <h5>Total Order Amount: $<%= @order.total_cents / 100 %> </h5>
+    <h5>Confirmation email sent to <%= @order.email %> </h5>
+    <h4>Enjoy your order!</h4>
+   
+    
+   
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
