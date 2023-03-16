@@ -31,3 +31,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Stripe
 
 ## Screenshots
+![Home Page](https://github.com/brandiecroberts/jungle/blob/master/data/home_page.png?raw=true)
+
+![My Cart Page](https://github.com/brandiecroberts/jungle/blob/master/data/my_cart.png?raw=true)
+
+![Products Page](https://github.com/brandiecroberts/jungle/blob/master/data/products.png?raw=true)
